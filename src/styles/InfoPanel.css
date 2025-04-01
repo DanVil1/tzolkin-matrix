@@ -1,0 +1,67 @@
+.info-panel {
+  background-color: #0e1619;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.day-signs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.day-sign-card {
+  flex: 1 1 calc(50% - 0.5rem);
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.left-card {
+  margin-right: 0.5rem;
+}
+
+.right-card {
+  margin-left: 0.5rem;
+}
+
+.day-sign-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.day-sign-card p {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.day-sign-card small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.day-details {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  margin: 1rem 0;
+}
+
+.day-significance {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .day-sign-card {
+    flex: 1 1 100%;
+  }
+  
+  .left-card, .right-card {
+    margin: 0 0 1rem 0;
+  }
+}
