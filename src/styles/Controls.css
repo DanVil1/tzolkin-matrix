@@ -1,0 +1,51 @@
+.controls {
+  padding: 1rem;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.control-buttons button {
+  background-color: #363636;
+  color: #e0e0e0;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.control-buttons button:hover {
+  background-color: #4a6fa5;
+}
+
+.control-buttons button.active {
+  background-color: #4a6fa5;
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.speed-control label {
+  font-size: 0.9rem;
+}
+
+.speed-control input {
+  flex: 1;
+}
+
+.speed-control span {
+  min-width: 30px;
+  text-align: center;
+}
