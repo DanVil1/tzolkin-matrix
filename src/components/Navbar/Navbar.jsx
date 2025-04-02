@@ -5,7 +5,13 @@ const Navbar = ({ onViewChange, currentView, views }) => {
       <div className="navbar-content">
         <h1>Tzolk'in Matrix</h1>
         <div className="view-selector">
-        <button 
+          <button 
+            className={currentView === views.FRACTAL ? 'active' : ''}
+            onClick={() => onViewChange(views.FRACTAL)}
+          >
+            4D Fractal
+          </button>
+          <button 
             className={currentView === views.TODAY ? 'active' : ''}
             onClick={() => onViewChange(views.TODAY)}
           >
