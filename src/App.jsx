@@ -10,8 +10,10 @@ import InfoPanel from './components/InfoPanel/InfoPanel';
 import Navbar from './components/Navbar/Navbar';
 import Controls from './components/Controls/Control';
 import TodayView from './components/TodayView/TodayView';
+import FractalView from './components/FractalView/FractalView';
 
 const VIEWS = {
+  FRACTAL: 'fractal', 
   TODAY: 'today',
   CIRCULAR: 'circular',
   SPIRAL: 'spiral',
@@ -20,7 +22,7 @@ const VIEWS = {
 };
 
 function App() {
-  const [currentView, setCurrentView] = useState(VIEWS.TODAY);
+  const [currentView, setCurrentView] = useState(VIEWS.FRACTAL);
   const [currentDay, setCurrentDay] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [animationSpeed, setAnimationSpeed] = useState(1);
@@ -56,6 +58,11 @@ function App() {
       <div className="main-content-wrapper">
         <div className="main-content">
           <div className="visualization-container">
+            {currentView === VIEWS.FRACTAL && (
+              <FractalView
+                sequence={sequence}
+              />
+            )}
             {currentView === VIEWS.TODAY && today && (
               <TodayView 
                 today={today}
